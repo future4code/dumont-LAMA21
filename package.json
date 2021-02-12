@@ -3,8 +3,10 @@
    "version": "1.0.0",
    "main": "index.js",
    "scripts": {
-      "start": "tsc && node ./build/src/index.js",
-      "test": "jest"
+      "start": "tsc && node --inspect ./build/src/index.js",
+      "test": "clear && echo \"Running tests...\" && jest",
+      "setup": "tsc && node ./build/tables/mySqlSetup.js",
+      "dev": "ts-node-dev ./src/index.ts"
    },
    "author": "Labenu_",
    "license": "ISC",
@@ -27,6 +29,7 @@
       "@types/knex": "^0.16.1",
       "@types/uuid": "^8.0.0",
       "ts-jest": "^26.1.0",
+      "ts-node-dev": "^1.1.1",
       "typescript": "^3.9.6"
    }
 }
