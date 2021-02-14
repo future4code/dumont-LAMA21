@@ -22,7 +22,7 @@ export class BandBusiness {
             }
 
             if (!band.name || !band.music_genre || !band.responsible) {
-                throw new CustomError(422, 'Fields name, musicGenre and respnsible must be provided')
+                throw new CustomError(422, 'Fields name, musicGenre and resposible must be provided')
             }
 
             await this.bandDatabase.registerBand(
